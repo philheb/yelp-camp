@@ -26,6 +26,8 @@ app.use(methodOverride("_method"));
 app.use(flash());
 // seedDB(); //seed the database
 
+app.locals.moment = require('moment');
+
 // PASSPORT CONFIGURATION
 app.use(require("express-session")({
     secret: "Victoria est la plus belle au monde",
