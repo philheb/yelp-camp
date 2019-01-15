@@ -36,10 +36,10 @@
                 </div>
                 <hr>
                 <% campground.comments.forEach(function(comment){ %>
-                    <div class="row">
+                    <div class="row comment">
                         <div class="col-md-12">
                             <strong><%= comment.author.username %></strong>
-                            <span class="pull-right"><%= moment(comment.createdAt).fromNow() %></span>
+                            
                             <p>
                                 <%= comment.text %>
                             </p>
@@ -52,6 +52,7 @@
                                     <input type="submit" class="btn btn-xs btn-danger" value="Delete">
                                 </form>
                             <% } %>
+                            <span class="pull-right"><em><%= moment(comment.createdAt).fromNow() %></em></span>
                         </div>
                         
                     </div>
